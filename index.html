@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Rose Day ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.rose {
+  font-size: 50px;
+  margin: 15px 0;
+  animation: float 2s infinite ease-in-out;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ffe3ea;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Rose Day 🌹</h1>
+    <div class="rose">🌹</div>
+    <p>
+      Thoda late jhalo...<br />
+      Pan majhya heart madhla rose fakt tujhya sathi aahe ❤️
+    </p><button onclick="playVideo()">Tap to See Your Surprise 🎥</button>
+
+<video id="roseVideo" width="100%" style="display:none; margin-top:15px; border-radius:15px;" controls>
+  <source src="surprise.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+  </div>  <script>
+    function playVideo() {
+      const video = document.getElementById('roseVideo');
+      video.style.display = 'block';
+      video.play();
+    }
+  </script></body>
+</html>
